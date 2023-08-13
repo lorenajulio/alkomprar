@@ -10,12 +10,17 @@ public class RegistroPage extends PageObject {
     private final By inputNombre = By.xpath("//input[@id='register.firstName']");
     private final By inputApellido = By.xpath("//input[@id='register.lastName']");
     private final By inputCelular = By.xpath("//*[@id='register.mobileNumber']");
+     private  final By Checkbox = By.xpath("//*[@id='alkostoRegisterForm']/div[7]/label");
+     private final By btnContinuarRegistro = By.xpath("//button[@class='button-primary btn-block js-btn-register-myaccount']");
 
 
+    public By getCheckbox() {
+        return Checkbox;
+    }
 
-
-
-
+    public By getBtnContinuarRegistro() {
+        return btnContinuarRegistro;
+    }
 
     public By getInputCorreo() {
         return inputCorreo;

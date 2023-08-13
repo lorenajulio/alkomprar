@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Runner</title>
+<title>Test results - AgregarProductoRunner</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Runner</h1>
+<h1>AgregarProductoRunner</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.alkomprar.runners.html">com.alkomprar.runners</a> &gt; Runner</div>
+<a href="../packages/com.alkomprar.runners.html">com.alkomprar.runners</a> &gt; AgregarProductoRunner</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m6.01s</div>
+<div class="counter">2m23.89s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,27 +73,31 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Registro de usuario exitoso"></a>
-<h3 class="failures">Registro de usuario exitoso</h3>
+<a name="agregar producto exitoso al carrito"></a>
+<h3 class="failures">agregar producto exitoso al carrito</h3>
 <span class="code">
-<pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
-	at com.alkomprar.steps.RegistroCorreoSteps.enviarTelefono(RegistroCorreoSteps.java:44)
-	at com.alkomprar.steps.RegistroCorreoSteps$ByteBuddy$kkXxt9lt.enviarTelefono$accessor$gi1fz1Bk(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at com.alkomprar.steps.RegistroCorreoSteps$ByteBuddy$kkXxt9lt.enviarTelefono(Unknown Source)
-	at com.alkomprar.stepDefinitions.registroUsuarioStepDefinitions.lleneLosCamposDelFormularioYDaClickEnAutorizar(registroUsuarioStepDefinitions.java:37)
-	at ✽.llene los campos del formulario y da click en autorizar(file:///C:/Users/EQ01/IdeaProjects/Alkomprar/src/test/resources/features/registro.feature:9)
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class=&quot;plp_breadcrumblist_link&quot;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at app//com.alkomprar.steps.ListaProductosStep.SeleccionAleatoria(ListaProductosStep.java:21)
+	at app//com.alkomprar.steps.ListaProductosStep$ByteBuddy$PdQ1dctP.SeleccionAleatoria$accessor$wJMLATuq(Unknown Source)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.19/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.19/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
+	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
+	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
+	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
+	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
+	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
+	at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at app//com.alkomprar.steps.ListaProductosStep$ByteBuddy$PdQ1dctP.SeleccionAleatoria(Unknown Source)
+	at app//com.alkomprar.stepDefinitions.agregarProductoStepDefinitions.queElUsuarioIngreseUnProductoYSeSeleccioneUnProductoAleatorio(agregarProductoStepDefinitions.java:27)
+	at ✽.que el usuario ingrese un producto y se seleccione un producto aleatorio(file:///C:/Users/EQ01/IdeaProjects/Alkomprar/src/test/resources/Features/agregarProducto.feature:13)
 </pre>
 </span>
 </div>
@@ -109,8 +113,8 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">Registro de usuario exitoso</td>
-<td class="failures">1m6.01s</td>
+<td class="failures">agregar producto exitoso al carrito</td>
+<td class="failures">2m23.89s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -118,18 +122,18 @@
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>ago. 11, 2023 8:06:00 A. M. org.openqa.selenium.remote.RemoteWebDriver checkNonW3CCapabilities
+<pre>ago. 12, 2023 9:51:28 P. M. org.openqa.selenium.remote.RemoteWebDriver checkNonW3CCapabilities
 WARNING: Support for Legacy Capabilities is deprecated; You are sending the following invalid capabilities: [prefs]; Please update to W3C Syntax: https://www.selenium.dev/blog/2022/legacy-protocol-support/
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 31286
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 12941
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1691759165.425][WARNING]: This version of ChromeDriver has not been tested with Chrome version 115.
-ago. 11, 2023 8:06:06 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1691895092.662][WARNING]: This version of ChromeDriver has not been tested with Chrome version 115.
+ago. 12, 2023 9:51:34 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 WARNING: Support for Legacy Capabilities is deprecated; You are sending the following invalid capabilities: [prefs]; Please update to W3C Syntax: https://www.selenium.dev/blog/2022/legacy-protocol-support/
-ago. 11, 2023 8:06:06 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ago. 12, 2023 9:51:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 115
-ago. 11, 2023 8:06:06 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+ago. 12, 2023 9:51:34 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.7.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
 ?[32m?[1m??[0m Share your Cucumber Report with your team at ?[36m?[1m?[4mhttps://reports.cucumber.io?[0m          ?[32m?[1m??[0m
@@ -158,7 +162,7 @@ WARNING: Unable to find version of CDP to use for . You may need to include a de
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 11/08/2023, 8:07:12 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 12/08/2023, 9:53:55 p. m.</p>
 </div>
 </div>
 </body>

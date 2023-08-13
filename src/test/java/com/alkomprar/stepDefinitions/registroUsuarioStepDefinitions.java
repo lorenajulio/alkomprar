@@ -4,18 +4,20 @@ package com.alkomprar.stepDefinitions;
 import com.alkomprar.steps.InicioSesionSteps;
 
 import com.alkomprar.steps.RegistroCorreoSteps;
+import com.alkomprar.steps.ValidacionRegistroStep;
 import io.cucumber.java.ast.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-
 import net.thucydides.core.annotations.Steps;
-import org.openqa.selenium.remote.RemoteWebElement;
+
 
 public class registroUsuarioStepDefinitions {
     @Steps
     InicioSesionSteps inicioSesion;
     @Steps
     RegistroCorreoSteps registroCorreoSteps;
+    @Steps
+    ValidacionRegistroStep validacionRegistroStep;
 
     @Dado("que el usuario abre la pagania de alkomprar y de click en mi cuenta")
     public void queElUsuarioAbreLaPaganiaDeAlkomprarYDeClickEnMiCuenta() {
@@ -35,10 +37,14 @@ public class registroUsuarioStepDefinitions {
         registroCorreoSteps.enviarNombre();
         registroCorreoSteps.enviarApellido();
         registroCorreoSteps.enviarTelefono();
+        registroCorreoSteps.checkbox();
+
 
     }
     @Entonces("da click en continuar y visualiza la pagina principal")
     public void daClickEnContinuarYVisualizaLaPaginaPrincipal() {
+        registroCorreoSteps.clickContinuarRegistro();
+        validacionRegistroStep.validacionRegistro();
 
     }
 
